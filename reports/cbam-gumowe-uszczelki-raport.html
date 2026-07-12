@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Raport prawny: CBAM dla gumowych uszczelek</title>
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #4b5563;
+      --accent: #0f766e;
+      --border: #d1d5db;
+      --ok: #166534;
+      --warn: #92400e;
+      --risk: #991b1b;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #eef6f5 0%, var(--bg) 280px);
+      color: var(--text);
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+      line-height: 1.55;
+    }
+
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .report {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 8px 28px rgba(17, 24, 39, 0.06);
+    }
+
+    h1, h2, h3 { line-height: 1.25; margin-top: 0; }
+    h1 { font-size: 1.8rem; margin-bottom: 8px; }
+    h2 {
+      margin-top: 28px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+      font-size: 1.25rem;
+    }
+    h3 { margin-top: 18px; font-size: 1.05rem; }
+
+    p, li { color: var(--text); }
+    .muted { color: var(--muted); }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 1px solid transparent;
+      margin-right: 6px;
+      margin-bottom: 6px;
+    }
+    .badge-ok { background: #ecfdf5; color: var(--ok); border-color: #bbf7d0; }
+    .badge-warn { background: #fffbeb; color: var(--warn); border-color: #fde68a; }
+    .badge-risk { background: #fef2f2; color: var(--risk); border-color: #fecaca; }
+
+    .meta {
+      background: #f9fafb;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin: 14px 0 22px;
+      font-size: 0.95rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    @media (min-width: 860px) {
+      .grid-2 { grid-template-columns: 1fr 1fr; }
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 14px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      font-size: 0.95rem;
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f3f4f6;
+      font-weight: 700;
+    }
+
+    a {
+      color: #0b5bd3;
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    .toc ul, .source-list { margin: 8px 0 0 18px; }
+    .source-list li { margin-bottom: 8px; }
+
+    .small { font-size: 0.9rem; }
+    .footnote {
+      margin-top: 24px;
+      border-top: 1px solid var(--border);
+      padding-top: 10px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <article class="report">
+      <h1>Pełny raport prawny HTML: CBAM dla gumowych uszczelek</h1>
+      <p class="muted">Wersja robocza oparta na zebranych danych urzędowych UE/PL i metadanych ELI API.</p>
+
+      <div class="meta">
+        <strong>Data raportu:</strong> 2026-07-12<br>
+        <strong>Temat:</strong> Ocena stosowania CBAM do importu gumowych uszczelek<br>
+        <strong>Status analizy:</strong> <span class="badge badge-ok">kompletna na poziomie regulacyjnym</span> <span class="badge badge-warn">wymaga potwierdzenia kodu CN produktu</span>
+      </div>
+
+      <section class="toc">
+        <h2>Spis treści</h2>
+        <ul>
+          <li><a href="#sekcja-regulacja">1. Identyfikacja regulacji</a></li>
+          <li><a href="#sekcja-ue">2. Status UE (CELEX/ELI, daty, charakter prawny)</a></li>
+          <li><a href="#sekcja-koncowe">3. Przepisy końcowe i skutki praktyczne</a></li>
+          <li><a href="#sekcja-zakres">4. Zakres CBAM a gumowe uszczelki</a></li>
+          <li><a href="#sekcja-pl">5. Status w Polsce (organ właściwy, akty krajowe)</a></li>
+          <li><a href="#sekcja-wiarygodnosc">6. Klasyfikacja wiarygodności źródeł</a></li>
+          <li><a href="#sekcja-monitoring">7. Co monitorować</a></li>
+          <li><a href="#sekcja-luki">8. Luki i ograniczenia analizy</a></li>
+          <li><a href="#sekcja-zrodla">9. Źródła z aktywnymi linkami</a></li>
+        </ul>
+      </section>
+
+      <section id="sekcja-regulacja">
+        <h2>1. Identyfikacja regulacji</h2>
+        <div class="card">
+          <p><strong>Regulacja główna:</strong> Rozporządzenie (UE) 2023/956 ustanawiające Carbon Border Adjustment Mechanism (CBAM).</p>
+          <p><strong>Pewność identyfikacji:</strong> wysoka (alias "CBAM" + potwierdzenie w EUR-Lex).</p>
+          <p><strong>Identyfikatory:</strong></p>
+          <ul>
+            <li>CELEX: <strong>32023R0956</strong></li>
+            <li>ELI: <a href="http://data.europa.eu/eli/reg/2023/956/oj" target="_blank" rel="noopener noreferrer">http://data.europa.eu/eli/reg/2023/956/oj</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="sekcja-ue">
+        <h2>2. Status UE (CELEX/ELI, daty, charakter prawny)</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>Parametry aktu</h3>
+            <ul>
+              <li><strong>Tytuł:</strong> Regulation (EU) 2023/956 establishing a carbon border adjustment mechanism.</li>
+              <li><strong>Publikacja:</strong> OJ L 130, 16.05.2023.</li>
+              <li><strong>Status:</strong> obowiązujący, akt zmieniany (wskazana wersja skonsolidowana w EUR-Lex).</li>
+              <li><strong>Charakter:</strong> rozporządzenie UE, bezpośrednio stosowane w państwach członkowskich.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Daty kluczowe</h3>
+            <ul>
+              <li><strong>Wejście w życie:</strong> dzień po publikacji (art. 36 ust. 1).</li>
+              <li><strong>Okres przejściowy:</strong> od 01.10.2023 do 31.12.2025 (art. 32).</li>
+              <li><strong>Reżim docelowy:</strong> od 01.01.2026 (art. 36 ust. 2 lit. b).</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="sekcja-koncowe">
+        <h2>3. Przepisy końcowe i skutki praktyczne</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Przepis</th>
+              <th>Typ normy</th>
+              <th>Skutek praktyczny</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Art. 32</td>
+              <td>Przepis przejściowy</td>
+              <td>W okresie przejściowym obowiązek raportowania, bez pełnego rozliczania certyfikatów.</td>
+            </tr>
+            <tr>
+              <td>Art. 35</td>
+              <td>Obowiązek raportowy</td>
+              <td>Raportowanie kwartalne importu i emisji w okresie przejściowym.</td>
+            </tr>
+            <tr>
+              <td>Art. 6 i 22</td>
+              <td>Reżim docelowy</td>
+              <td>Deklaracja roczna i umarzanie certyfikatów CBAM od pełnego wdrożenia.</td>
+            </tr>
+            <tr>
+              <td>Art. 36</td>
+              <td>Wejście w życie / stosowanie</td>
+              <td>Rozdziela datę wejścia w życie aktu i datę stosowania przepisów materialnych.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="sekcja-zakres">
+        <h2>4. Zakres CBAM a gumowe uszczelki</h2>
+        <div class="card">
+          <p>CBAM dotyczy towarów wymienionych w Załączniku I (m.in. cement, energia elektryczna, nawozy, żelazo i stal, aluminium, wodór).</p>
+          <p><strong>Wniosek roboczy:</strong> typowe gumowe uszczelki nie są wskazane jako kategoria objęta zakresem początkowym CBAM.</p>
+          <p><strong>Warunek rozstrzygający:</strong> ostateczna klasyfikacja taryfowa (kod CN) konkretnego towaru. Jeżeli kod CN nie mieści się w Załączniku I, obowiązki CBAM co do zasady nie powstają.</p>
+          <p><span class="badge badge-warn">Wymagane potwierdzenie CN</span> dla finalnej konkluzji operacyjnej importera.</p>
+        </div>
+      </section>
+
+      <section id="sekcja-pl">
+        <h2>5. Status w Polsce (organ właściwy, akty krajowe)</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>Potwierdzony akt krajowy</h3>
+            <p><strong>Dz.U. 2026 poz. 11</strong> (ELI: DU/2026/11):
+              rozporządzenie wyznaczające dyrektora IAS właściwego w sprawach przyznania/odmowy/cofnięcia statusu upoważnionego zgłaszającego CBAM.</p>
+            <p><strong>Data wejścia w życie:</strong> 2026-01-13.</p>
+          </div>
+          <div class="card">
+            <h3>Podstawa prawna krajowa</h3>
+            <p>Ustawa z 17.07.2009 r. o systemie zarządzania emisjami gazów cieplarnianych i innych substancji (ELI: DU/2009/1070), z metadanym o podstawie: art. 54b ust. 13.</p>
+            <p><span class="badge badge-ok">Organ/procedura statusu CBAM potwierdzone</span></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="sekcja-wiarygodnosc">
+        <h2>6. Klasyfikacja wiarygodności źródeł</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Źródło</th>
+              <th>Kategoria wiarygodności</th>
+              <th>Uwagi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>EUR-Lex/OJ/ELI UE (CELEX 32023R0956)</td>
+              <td>urzędowa wersja aktu</td>
+              <td>Źródło podstawowe dla statusu i dat stosowania CBAM.</td>
+            </tr>
+            <tr>
+              <td>ELI API Sejm (DU/2026/11, DU/2009/1070)</td>
+              <td>obowiązujące źródło prawa</td>
+              <td>Metadane i identyfikacja aktów krajowych, obejście ograniczenia CAPTCHA w ISAP.</td>
+            </tr>
+            <tr>
+              <td>DG TAXUD CBAM portal</td>
+              <td>materiał urzędowy niewiążący</td>
+              <td>Informacje operacyjne i komunikaty, ale nie substytut tekstu aktu.</td>
+            </tr>
+            <tr>
+              <td>KOBiZE</td>
+              <td>materiał urzędowy niewiążący</td>
+              <td>Wsparcie praktyczne i komunikacyjne; kwalifikacja prawna wynika z aktów normatywnych.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="sekcja-monitoring">
+        <h2>7. Co monitorować</h2>
+        <ol>
+          <li>Zmiany Załącznika I CBAM i ewentualne rozszerzenie zakresu na produkty downstream.</li>
+          <li>Nowe akty wykonawcze/delegowane Komisji dotyczące metod emisji, weryfikacji i rozliczeń.</li>
+          <li>Dalsze krajowe akty PL dotyczące kontroli, sankcji i procedur operacyjnych CBAM.</li>
+          <li>W każdym imporcie: prawidłowy kod CN i jego zgodność z listą z Załącznika I.</li>
+        </ol>
+      </section>
+
+      <section id="sekcja-luki">
+        <h2>8. Luki i ograniczenia analizy</h2>
+        <ul>
+          <li>Brak automatycznego odczytu ISAP przez CAPTCHA w czasie badania.</li>
+          <li>Brak danych o konkretnym kodzie CN i specyfikacji technicznej Twoich uszczelek (to warunek finalnej kwalifikacji).</li>
+          <li>Raport nie zastępuje indywidualnej opinii prawno-podatkowej dla konkretnej transakcji celnej.</li>
+        </ul>
+      </section>
+
+      <section id="sekcja-zrodla">
+        <h2>9. Źródła z aktywnymi linkami</h2>
+        <ol class="source-list">
+          <li>
+            EUR-Lex CELEX 32023R0956 (tekst aktu):
+            <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0956" target="_blank" rel="noopener noreferrer">https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0956</a>
+          </li>
+          <li>
+            ELI UE (up-to-date link):
+            <a href="http://data.europa.eu/eli/reg/2023/956/oj" target="_blank" rel="noopener noreferrer">http://data.europa.eu/eli/reg/2023/956/oj</a>
+          </li>
+          <li>
+            Portal Komisji (DG TAXUD) CBAM:
+            <a href="https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en" target="_blank" rel="noopener noreferrer">https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en</a>
+          </li>
+          <li>
+            ELI API search (CBAM):
+            <a href="https://api.sejm.gov.pl/eli/acts/search?title=CBAM&limit=20" target="_blank" rel="noopener noreferrer">https://api.sejm.gov.pl/eli/acts/search?title=CBAM&amp;limit=20</a>
+          </li>
+          <li>
+            ELI akt PL DU/2026/11:
+            <a href="https://api.sejm.gov.pl/eli/acts/DU/2026/11" target="_blank" rel="noopener noreferrer">https://api.sejm.gov.pl/eli/acts/DU/2026/11</a>
+          </li>
+          <li>
+            ELI akt PL DU/2009/1070:
+            <a href="https://api.sejm.gov.pl/eli/acts/DU/2009/1070" target="_blank" rel="noopener noreferrer">https://api.sejm.gov.pl/eli/acts/DU/2009/1070</a>
+          </li>
+          <li>
+            ELI API docs (referencyjnie):
+            <a href="https://api.sejm.gov.pl/eli.html" target="_blank" rel="noopener noreferrer">https://api.sejm.gov.pl/eli.html</a>
+          </li>
+          <li>
+            KOBiZE (informacje ogólne):
+            <a href="https://www.kobize.pl/" target="_blank" rel="noopener noreferrer">https://www.kobize.pl/</a>
+          </li>
+        </ol>
+      </section>
+
+      <div class="footnote">
+        Raport przygotowany na podstawie danych zgromadzonych w toku analizy (EUR-Lex, ELI/API Sejm, DG TAXUD, KOBiZE). Wnioski o stosowaniu CBAM wobec konkretnego produktu zależą od finalnej klasyfikacji CN.
+      </div>
+    </article>
+  </div>
+</body>
+</html>
